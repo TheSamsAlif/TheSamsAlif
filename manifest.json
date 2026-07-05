@@ -1,0 +1,12 @@
+{
+  "name": "Sams Alif — Portfolio",
+  "short_name": "Sams Alif",
+  "description": "Portfolio of Sams Alif — Software Engineer, AI Developer & Full Stack Developer.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050816",
+  "theme_color": "#050816",
+  "icons": [
+    { "src": "assets/portrait.jpg", "sizes": "512x512", "type": "image/jpeg" }
+  ]
+}

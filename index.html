@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sams Alif — Software Engineer, AI Developer & Full Stack Developer</title>
+  <meta name="description" content="Sams Alif — Computer Science student and aspiring Software Engineer from Dhaka, Bangladesh. Building modern web applications, AI-powered solutions, and scalable software systems." />
+  <meta name="author" content="Sams Alif" />
+  <meta name="theme-color" content="#050816" />
+  <link rel="canonical" href="https://samsalif.me/" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="assets/portrait.jpg" />
+
+  <!-- OpenGraph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sams Alif — Software Engineer & AI Developer" />
+  <meta property="og:description" content="Premium portfolio of Sams Alif. Full Stack Developer, AI enthusiast, and open source contributor from Bangladesh." />
+  <meta property="og:image" content="assets/portrait.jpg" />
+  <meta property="og:url" content="https://samsalif.me/" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sams Alif — Software Engineer & AI Developer" />
+  <meta name="twitter:description" content="Premium portfolio of Sams Alif. Full Stack Developer & AI enthusiast." />
+  <meta name="twitter:image" content="assets/portrait.jpg" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sams Alif",
+    "alternateName": "Alif",
+    "url": "https://samsalif.me/",
+    "image": "assets/portrait.jpg",
+    "jobTitle": "Junior Software Engineer",
+    "email": "mailto:samsalif852@gmail.com",
+    "sameAs": [
+      "https://github.com/TheSamsAlif",
+      "https://www.instagram.com/sams_alif10/"
+    ],
+    "address": { "@type": "PostalAddress", "addressLocality": "Dhaka", "addressCountry": "Bangladesh" },
+    "alumniOf": "Green University of Bangladesh"
+  }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.0/dist/index.global.js" integrity="sha384-nWTzRTCY/9V4Bo352ehygr1c4cnst4XN6lMR3fipakEQrhVpc0hEM5Dii3Amz0sT" crossorigin="anonymous"></script>
+  <style type="text/tailwindcss">@custom-variant dark (&:where(.dark, .dark *));</style>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Animation libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ============ PAGE LOADER ============ -->
+  <div id="loader" class="loader">
+    <div class="loader__inner">
+      <div class="loader__ring"></div>
+      <div class="loader__name">SA</div>
+    </div>
+    <div class="loader__bar"><span id="loaderProgress"></span></div>
+    <div class="loader__label">Loading experience</div>
+  </div>
+
+  <!-- ============ CUSTOM CURSOR ============ -->
+  <div id="cursorDot" class="cursor-dot"></div>
+  <div id="cursorRing" class="cursor-ring"></div>
+
+  <!-- ============ SCROLL PROGRESS ============ -->
+  <div id="scrollProgress" class="scroll-progress"></div>
+
+  <!-- ============ BACKGROUND CANVAS ============ -->
+  <canvas id="bgCanvas" class="bg-canvas"></canvas>
+  <div class="aurora">
+    <div class="aurora__blob aurora__blob--1"></div>
+    <div class="aurora__blob aurora__blob--2"></div>
+    <div class="aurora__blob aurora__blob--3"></div>
+  </div>
+  <div class="noise"></div>
+  <div id="spotlight" class="spotlight"></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a href="#hero" class="nav__brand" data-cursor="hover">
+      <span class="nav__brand-mark">SA</span>
+      <span class="nav__brand-text">Sams<span class="accent">.</span>Alif</span>
+    </a>
+    <nav class="nav__links">
+      <a href="#about" data-cursor="hover">About</a>
+      <a href="#stack" data-cursor="hover">Stack</a>
+      <a href="#projects" data-cursor="hover">Projects</a>
+      <a href="#github" data-cursor="hover">GitHub</a>
+      <a href="#achievements" data-cursor="hover">Awards</a>
+      <a href="#contact" data-cursor="hover">Contact</a>
+    </nav>
+    <div class="nav__actions">
+      <button id="cmdkBtn" class="nav__cmdk" data-cursor="hover" aria-label="Open command palette">
+        <span>⌘</span>K
+      </button>
+      <a href="#contact" class="btn btn--sm magnetic" data-cursor="hover">Let's talk</a>
+    </div>
+    <button id="menuToggle" class="nav__burger" aria-label="Toggle menu"><span></span><span></span></button>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section id="hero" class="hero section">
+      <div class="hero__grid">
+        <div class="hero__content">
+          <div class="hero__badge reveal">
+            <span class="pulse-dot"></span> Available for opportunities
+          </div>
+          <p class="hero__hello reveal">Hello <span class="wave">👋</span> &nbsp;I'm</p>
+          <h1 class="hero__name" data-split>Sams Alif</h1>
+          <div class="hero__role reveal">
+            <span class="hero__role-prefix">A&nbsp;</span>
+            <span id="typed" class="hero__typed"></span>
+            <span class="hero__caret"></span>
+          </div>
+          <p class="hero__bio reveal">
+            A passionate Computer Science student and aspiring Software Engineer from Bangladesh. I build
+            modern web applications, AI-powered solutions, and scalable software systems — turning ideas
+            into polished digital products through clean architecture and cutting-edge tech.
+          </p>
+          <div class="hero__cta reveal">
+            <a href="#projects" class="btn btn--primary magnetic" data-cursor="hover">View Projects</a>
+            <a href="resume.html" target="_blank" rel="noopener" class="btn btn--ghost magnetic" data-cursor="hover">Download Resume</a>
+            <a href="#contact" class="btn btn--ghost magnetic" data-cursor="hover">Contact Me</a>
+          </div>
+          <div class="hero__socials reveal">
+            <a href="https://github.com/TheSamsAlif" target="_blank" rel="noopener" aria-label="GitHub" data-cursor="hover" class="social">GitHub</a>
+            <a href="https://www.instagram.com/sams_alif10/" target="_blank" rel="noopener" aria-label="Instagram" data-cursor="hover" class="social">Instagram</a>
+            <a href="mailto:samsalif852@gmail.com" aria-label="Email" data-cursor="hover" class="social">Email</a>
+          </div>
+        </div>
+
+        <div class="hero__portrait reveal" id="portraitTilt" data-cursor="view">
+          <div class="portrait-card">
+            <div class="portrait-card__glow"></div>
+            <div class="portrait-card__border"></div>
+            <img src="assets/portrait.jpg" alt="Portrait of Sams Alif" class="portrait-card__img" />
+            <div class="portrait-card__reflection"></div>
+            <div class="portrait-card__chip portrait-card__chip--1">AI Developer</div>
+            <div class="portrait-card__chip portrait-card__chip--2">Full Stack</div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-indicator" data-cursor="hover" aria-label="Scroll down">
+        <span class="scroll-indicator__mouse"><span></span></span>
+        <span class="scroll-indicator__text">Scroll</span>
+      </a>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Creative</span><span>•</span><span>Professional</span><span>•</span><span>Minimalist</span><span>•</span>
+        <span>Tech Enthusiast</span><span>•</span><span>Fast Learner</span><span>•</span><span>Problem Solver</span><span>•</span>
+        <span>Continuous Learner</span><span>•</span>
+        <span>Creative</span><span>•</span><span>Professional</span><span>•</span><span>Minimalist</span><span>•</span>
+        <span>Tech Enthusiast</span><span>•</span><span>Fast Learner</span><span>•</span><span>Problem Solver</span><span>•</span>
+        <span>Continuous Learner</span><span>•</span>
+      </div>
+    </div>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section about">
+      <div class="section__head reveal">
+        <span class="section__kicker">01 — About</span>
+        <h2 class="section__title">Turning ideas into <span class="grad-text">real products</span></h2>
+      </div>
+      <div class="about__grid">
+        <div class="about__col reveal">
+          <div class="about__portrait">
+            <img src="assets/portrait.jpg" alt="Sams Alif" />
+          </div>
+          <div class="about__facts">
+            <div class="fact"><span class="fact__k">Name</span><span class="fact__v">Sams Alif</span></div>
+            <div class="fact"><span class="fact__k">Based in</span><span class="fact__v">Dhaka, Bangladesh</span></div>
+            <div class="fact"><span class="fact__k">Age</span><span class="fact__v">25</span></div>
+            <div class="fact"><span class="fact__k">Focus</span><span class="fact__v">Full Stack · AI · ML</span></div>
+            <div class="fact"><span class="fact__k">Status</span><span class="fact__v">Open to work</span></div>
+          </div>
+        </div>
+        <div class="about__col reveal">
+          <p class="about__lead">
+            I'm a Computer Science &amp; Engineering student at <strong>Green University of Bangladesh</strong>,
+            and an aspiring software engineer who lives at the intersection of clean code and elegant design.
+          </p>
+          <div class="about__blocks">
+            <div class="about__block">
+              <h3>My Journey</h3>
+              <p>From writing my first line of C to shipping full-stack apps and experimenting with machine learning models — every project is a step toward mastery.</p>
+            </div>
+            <div class="about__block">
+              <h3>Mission</h3>
+              <p>To continuously learn, create impactful digital experiences, and contribute to the future of technology through open source.</p>
+            </div>
+            <div class="about__block">
+              <h3>Vision</h3>
+              <p>Become a software engineer who builds products that feel effortless, intelligent, and genuinely useful for people.</p>
+            </div>
+            <div class="about__block">
+              <h3>Passion</h3>
+              <p>AI-powered solutions, scalable architectures, motion design, and cyber security fundamentals.</p>
+            </div>
+          </div>
+
+          <div class="stats" id="stats">
+            <div class="stat"><div class="stat__num" data-count="7">0</div><div class="stat__label">Public Repos</div></div>
+            <div class="stat"><div class="stat__num" data-count="5">0</div><div class="stat__label">Languages</div></div>
+            <div class="stat"><div class="stat__num" data-count="20">0</div><div class="stat__label">Technologies</div></div>
+            <div class="stat"><div class="stat__num" data-count="100">0</div><div class="stat__label">% Curiosity</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education timeline -->
+      <div class="timeline reveal">
+        <h3 class="timeline__title">Education Timeline</h3>
+        <div class="timeline__track">
+          <div class="tl-item">
+            <div class="tl-item__dot"></div>
+            <div class="tl-item__year">2022 — Present</div>
+            <div class="tl-item__body">
+              <h4>B.Sc. in Computer Science &amp; Engineering</h4>
+              <p>Green University of Bangladesh — Dhaka</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-item__dot"></div>
+            <div class="tl-item__year">2023 — Present</div>
+            <div class="tl-item__body">
+              <h4>Full Stack Development</h4>
+              <p>React, Next.js, Node.js &amp; modern web engineering</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-item__dot"></div>
+            <div class="tl-item__year">2024 — Present</div>
+            <div class="tl-item__body">
+              <h4>AI &amp; Machine Learning</h4>
+              <p>TensorFlow, PyTorch, OpenCV &amp; applied ML</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TECH STACK ============ -->
+    <section id="stack" class="section stack">
+      <div class="section__head reveal">
+        <span class="section__kicker">02 — Tech Stack</span>
+        <h2 class="section__title">Tools I build <span class="grad-text">with</span></h2>
+      </div>
+      <div class="stack__grid" id="stackGrid"><!-- injected --></div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="section projects">
+      <div class="section__head reveal">
+        <span class="section__kicker">03 — Projects</span>
+        <h2 class="section__title">Selected <span class="grad-text">work</span></h2>
+        <p class="section__sub">Pulled live from my GitHub — <a href="https://github.com/TheSamsAlif" target="_blank" rel="noopener" data-cursor="hover">@TheSamsAlif</a></p>
+      </div>
+      <div class="projects__filters" id="projectFilters"></div>
+      <div class="projects__grid" id="projectsGrid"><!-- injected --></div>
+    </section>
+
+    <!-- ============ GITHUB STATS ============ -->
+    <section id="github" class="section github">
+      <div class="section__head reveal">
+        <span class="section__kicker">04 — GitHub</span>
+        <h2 class="section__title">Coding <span class="grad-text">activity</span></h2>
+      </div>
+      <div class="github__grid">
+        <div class="gh-card reveal">
+          <div class="gh-card__num" data-count="7">0</div>
+          <div class="gh-card__label">Public Repositories</div>
+        </div>
+        <div class="gh-card reveal">
+          <div class="gh-card__num" data-count="6">0</div>
+          <div class="gh-card__label">Languages Used</div>
+        </div>
+        <div class="gh-card reveal">
+          <div class="gh-card__num" data-count="4">0</div>
+          <div class="gh-card__label">Live Deployments</div>
+        </div>
+        <div class="gh-card reveal">
+          <div class="gh-card__num" data-count="2025">0</div>
+          <div class="gh-card__label">Most Active Year</div>
+        </div>
+      </div>
+      <div class="github__panels">
+        <div class="gh-panel reveal">
+          <h3>Top Languages</h3>
+          <div id="langBars" class="lang-bars"></div>
+        </div>
+        <div class="gh-panel reveal">
+          <h3>Contribution Graph</h3>
+          <div id="contribGraph" class="contrib-graph"></div>
+          <p class="gh-panel__note">Simulated 12-week activity heatmap</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ACHIEVEMENTS ============ -->
+    <section id="achievements" class="section achievements">
+      <div class="section__head reveal">
+        <span class="section__kicker">05 — Achievements</span>
+        <h2 class="section__title">Milestones &amp; <span class="grad-text">highlights</span></h2>
+      </div>
+      <div class="achievements__grid" id="achievementsGrid"><!-- injected --></div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section contact">
+      <div class="section__head reveal">
+        <span class="section__kicker">06 — Contact</span>
+        <h2 class="section__title">Let's build something <span class="grad-text">together</span></h2>
+      </div>
+      <div class="contact__grid">
+        <div class="contact__info reveal">
+          <p>Have a project, an idea, or just want to say hi? My inbox is always open.</p>
+          <a href="mailto:samsalif852@gmail.com" class="contact__link" data-cursor="hover">
+            <span class="contact__link-k">Email</span>
+            <span class="contact__link-v">samsalif852@gmail.com</span>
+          </a>
+          <a href="https://github.com/TheSamsAlif" target="_blank" rel="noopener" class="contact__link" data-cursor="hover">
+            <span class="contact__link-k">GitHub</span>
+            <span class="contact__link-v">@TheSamsAlif</span>
+          </a>
+          <a href="https://www.instagram.com/sams_alif10/" target="_blank" rel="noopener" class="contact__link" data-cursor="hover">
+            <span class="contact__link-k">Instagram</span>
+            <span class="contact__link-v">@sams_alif10</span>
+          </a>
+        </div>
+        <form class="contact__form glass reveal" id="contactForm" novalidate>
+          <div class="field">
+            <input type="text" id="cname" name="name" required autocomplete="name" placeholder=" " />
+            <label for="cname">Your name</label>
+          </div>
+          <div class="field">
+            <input type="email" id="cemail" name="email" required autocomplete="email" placeholder=" " />
+            <label for="cemail">Your email</label>
+          </div>
+          <div class="field">
+            <textarea id="cmsg" name="message" rows="4" required placeholder=" "></textarea>
+            <label for="cmsg">Your message</label>
+          </div>
+          <button type="submit" class="btn btn--primary magnetic" data-cursor="hover">Send Message</button>
+          <p class="contact__status" id="contactStatus" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <span>© <span id="year"></span> Sams Alif — Crafted with precision in Dhaka.</span>
+      <span class="footer__hint">Press <kbd>⌘</kbd><kbd>K</kbd> · try the <b id="eggHint">Konami</b> code</span>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="backTop" class="back-top" aria-label="Back to top" data-cursor="hover">↑</button>
+
+  <!-- ============ COMMAND PALETTE ============ -->
+  <div id="cmdk" class="cmdk" aria-hidden="true">
+    <div class="cmdk__backdrop"></div>
+    <div class="cmdk__panel glass">
+      <input id="cmdkInput" class="cmdk__input" placeholder="Type a command or search…" />
+      <ul id="cmdkList" class="cmdk__list"></ul>
+    </div>
+  </div>
+
+  <!-- ============ AI CHAT ASSISTANT ============ -->
+  <button id="chatToggle" class="chat-toggle" aria-label="Open assistant" data-cursor="hover">✦</button>
+  <div id="chatPanel" class="chat-panel glass" aria-hidden="true">
+    <div class="chat-panel__head">
+      <span>Ask about Sams</span>
+      <button id="chatClose" aria-label="Close">✕</button>
+    </div>
+    <div id="chatBody" class="chat-panel__body"></div>
+    <form id="chatForm" class="chat-panel__form">
+      <input id="chatInput" placeholder="e.g. What's your tech stack?" autocomplete="off" />
+      <button type="submit" aria-label="Send">➤</button>
+    </form>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
