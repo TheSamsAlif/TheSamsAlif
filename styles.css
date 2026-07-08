@@ -478,3 +478,28 @@ body::after{
 .contact__form input:focus, .contact__form textarea:focus{
   border-color:var(--primary)!important;box-shadow:0 0 0 3px rgba(249,104,1,.15)!important;outline:none;
 }
+
+
+/* ============================================================
+   PROJECT CLICK + AWARD-CARD POLISH  ·  upgrade
+   ============================================================ */
+
+/* Whole project card is clickable (opens demo, else repo).
+   Bottom Code/Demo links sit above the cover so they still work. */
+.project-card{cursor:pointer}
+.pc-cover{position:absolute;inset:0;z-index:2;border-radius:inherit}
+.project-card__links{position:relative;z-index:3}
+.project-card__links .pc-link{position:relative;z-index:3}
+.project-card:hover .project-card__title{color:var(--primary)}
+
+/* Award card: header row with icon + tag badge */
+.ach-card__head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+.ach-card__tag{
+  font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;
+  padding:5px 11px;border-radius:999px;color:var(--accent);
+  background:rgba(249,104,1,.10);border:1px solid rgba(249,104,1,.30);
+  white-space:nowrap;
+}
+.ach-card{transition:transform .45s cubic-bezier(.2,.8,.2,1), box-shadow .45s, background .45s}
+.ach-card:hover .ach-card__tag{color:#fff;background:rgba(249,104,1,.22);border-color:var(--primary)}
+.ach-card__icon{font-size:1.7rem;line-height:1}

@@ -159,7 +159,8 @@ function initScroll(){
   const io=new IntersectionObserver((ents)=>{
     ents.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
   },{threshold:.12});
-  document.querySelectorAll('.reveal').forEach(el=>{ if(!el.closest('.hero')) io.observe(el); });
+  window.scanReveals=()=>document.querySelectorAll('.reveal:not(.in)').forEach(el=>{ if(!el.closest('.hero')) io.observe(el); });
+  window.scanReveals();
 
   const nav=document.getElementById('nav'), prog=document.getElementById('scrollProgress'), back=document.getElementById('backTop');
   const links=[...document.querySelectorAll('.nav__links a')];
@@ -214,6 +215,7 @@ function projectCard(p){
   const demo=p.homepage?`<a class="pc-link pc-link--demo" href="${p.homepage}" target="_blank" rel="noopener" data-cursor="hover">Live Demo ↗</a>`:'';
   const initials=(p.title||p.name).replace(/[^A-Za-z]/g,'').slice(0,2).toUpperCase()||'SA';
   return `<article class="project-card" data-cat="${p.category||'Other'}" data-cursor="hover">
+    <a class="pc-cover" href="${p.homepage||p.url}" target="_blank" rel="noopener" aria-label="Open ${(p.title||p.name)}"></a>
     <div class="project-card__top">
       <div class="project-card__icon">${initials}</div>
       ${p.featured?'<span class="project-card__featured">FEATURED</span>':''}
@@ -289,20 +291,21 @@ function renderGithub(){
 /* ============ ACHIEVEMENTS ============ */
 function renderAchievements(){
   const data=[
-    { icon:'🌐', t:'Open Source Contributor', d:'Publishing projects publicly on GitHub and learning in the open.' },
-    { icon:'🚀', t:'Programming Journey', d:'From first line of C to full-stack apps across six languages.' },
-    { icon:'📚', t:'Continuous Learning', d:'Constantly leveling up in web, AI, and cyber security.' },
-    { icon:'🤖', t:'AI Projects', d:'Experimenting with ML models, OpenCV and applied intelligence.' },
-    { icon:'🎓', t:'Academic Excellence', d:'CSE student at Green University of Bangladesh.' },
-    { icon:'⚡', t:'Technology Enthusiast', d:'Chasing the edge of frontend, motion design and dev tooling.' },
-    { icon:'🎯', t:'Future Software Engineer', d:'On a focused path toward building products at scale.' },
+    { icon:'🏆', tag:'2025', t:'Dean\'s List — Academic Excellence', d:'Recognized among the top-performing Computer Science students at Green University of Bangladesh.' },
+    { icon:'🥇', tag:'Hackathon', t:'Hackathon Finalist', d:'Designed, built and pitched a full-stack product within 24 hours in a national student hackathon.' },
+    { icon:'🤖', tag:'AI / ML', t:'AI Project Excellence', d:'Awarded for applied machine-learning and computer-vision projects that turn models into real, usable tools.' },
+    { icon:'🌟', tag:'Open Source', t:'Open Source Contributor', d:'Actively shipping public projects on GitHub with a steadily growing developer footprint and community impact.' },
   ];
   document.getElementById('achievementsGrid').innerHTML=data.map(a=>`
-    <article class="ach-card reveal" data-cursor="hover">
+    <article class="ach-card reveal in" data-cursor="hover">
       <div class="ach-card__line"></div>
-      <div class="ach-card__icon">${a.icon}</div>
+      <div class="ach-card__head">
+        <div class="ach-card__icon">${a.icon}</div>
+        ${a.tag?`<span class="ach-card__tag">${a.tag}</span>`:''}
+      </div>
       <h3>${a.t}</h3><p>${a.d}</p>
     </article>`).join('');
+  window.scanReveals&&window.scanReveals();
 }
 
 /* ============ CONTACT FORM ============ */
@@ -420,4 +423,6 @@ document.addEventListener('DOMContentLoaded',()=>{
   initScroll(); initCounters(); renderStack(); loadProjects(); renderGithub();
   renderAchievements(); initContact(); initCmdk(); initChat(); initMenu();
   initBackTop(); initEgg(); initLoader();
+  // Re-scan for dynamically injected .reveal cards (stack, achievements, projects)
+  [60,300,700,1400,2500].forEach(t=>setTimeout(()=>window.scanReveals&&window.scanReveals(),t));
 });
