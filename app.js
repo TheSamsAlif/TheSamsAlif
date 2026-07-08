@@ -102,12 +102,17 @@ function startHero(){
     name.dataset.done='1';
     name.innerHTML=name.textContent.split('').map(ch=>`<span class="char">${ch===' '?'&nbsp;':ch}</span>`).join('');
     if(window.gsap){
-      gsap.from(name.querySelectorAll('.char'),{yPercent:120,opacity:0,stagger:.04,duration:.9,ease:'power4.out',delay:.15});
+      gsap.fromTo(name.querySelectorAll('.char'), {yPercent:120, opacity:0}, {yPercent:0, opacity:1, stagger:.04, duration:.9, ease:'power4.out', delay:.15});
     }
   }
-  // reveal hero items
-  document.querySelectorAll('.hero .reveal').forEach((el,i)=>{ setTimeout(()=>el.classList.add('in'),200+i*90); });
-  typeLoop();
+    // reveal hero items
+    document.querySelectorAll('.hero .reveal').forEach((el,i)=>{ setTimeout(()=>el.classList.add('in'),200+i*90); });
+    // Explicitly reveal the name element
+    const nameElement = document.querySelector('.hero__name');
+    if (nameElement) {
+        setTimeout(() => nameElement.classList.add('in'), 400); // Add a small delay to ensure animation starts
+    }
+    typeLoop();
 }
 function typeLoop(){
   const el=document.getElementById('typed');
