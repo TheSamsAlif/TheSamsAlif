@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="430" viewBox="0 0 860 430" fill="none">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="proj-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080C14"/>
+      <stop offset="50%" stop-color="#0E1422"/>
+      <stop offset="100%" stop-color="#070A10"/>
+    </linearGradient>
+
+    <!-- Outer Border Gradient (Red & Orange Hacker Theme) -->
+    <linearGradient id="proj-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF3B30" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#FF7700" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#FF2A55" stop-opacity="0.8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Container Card -->
+  <rect x="2" y="2" width="856" height="426" rx="16" fill="url(#proj-bg)" stroke="url(#proj-border)" stroke-width="1.8"/>
+
+  <!-- Top Header Bar -->
+  <g transform="translate(24, 25)">
+    <text x="0" y="14" font-family="JetBrains Mono, monospace" font-size="14" font-weight="800" letter-spacing="2" fill="#FF7700">PROJECTS.LIST</text>
+    <text x="160" y="14" font-family="JetBrains Mono, monospace" font-size="13" font-weight="600" fill="#64748B">./projects.sh --pinned</text>
+    <text x="812" y="14" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="12" fill="#94A3B8">4 pinned</text>
+    <line x1="0" y1="26" x2="812" y2="26" stroke="#1F283E" stroke-width="1"/>
+  </g>
+
+  <!-- 4 Pinned Projects Cards -->
+  
+    <!-- Card: CYBERCRYPT-PRO -->
+    <g>
+      <!-- Card background -->
+      <rect x="18" y="65" width="405" height="165" rx="12" fill="#0D111A" stroke="#1F283E" stroke-width="1.2"/>
+      
+      <!-- Top header bar in card -->
+      <path d="M 18 97 L 423 97" stroke="#161E30" stroke-width="1"/>
+      <circle cx="36" cy="81" r="4" fill="#FF3B30"/>
+      <text x="48" y="85" font-family="JetBrains Mono, monospace" font-size="11" font-weight="600" fill="#94A3B8">python-cryptography</text>
+      
+      <!-- Project Name with Blinking Terminal Cursor -->
+      <text x="36" y="127" font-family="JetBrains Mono, monospace" font-size="16" font-weight="800" fill="#F1F5F9">
+        CYBERCRYPT-PRO<tspan fill="#FF7700"> _<animate attributeName="opacity" values="1;0;1" dur="1.2s" begin="0.00s" repeatCount="indefinite"/></tspan>
+      </text>
+      
+      <!-- Description -->
+      <text x="36" y="151" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12" fill="#94A3B8">
+        Educational cryptography visualization system (Caesa...
+      </text>
+      
+      <!-- Donut Chart -->
+      <circle cx="368" cy="143" r="26" fill="none" stroke="#222838" stroke-width="8"/><circle cx="368" cy="143" r="26" fill="none" stroke="#3776AB" stroke-width="8" stroke-dasharray="125.79 37.57" stroke-dashoffset="-0.00" transform="rotate(-90 368 143)"/><circle cx="368" cy="143" r="26" fill="none" stroke="#E34F26" stroke-width="8" stroke-dasharray="37.57 125.79" stroke-dashoffset="-125.79" transform="rotate(-90 368 143)"/><text x="368" y="147" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12" font-weight="800" fill="#FFFFFF">77%</text>
+      
+      <!-- Legend / Language breakdown -->
+      <circle cx="34" cy="209" r="3.5" fill="#3776AB"/><text x="41" y="212" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600" fill="#94A3B8">Python 77%</text><circle cx="114" cy="209" r="3.5" fill="#E34F26"/><text x="121" y="212" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600" fill="#94A3B8">HTML 23%</text>
+    </g>
+    
+    <!-- Card: Medify-PRO -->
+    <g>
+      <!-- Card background -->
+      <rect x="437" y="65" width="405" height="165" rx="12" fill="#0D111A" stroke="#1F283E" stroke-width="1.2"/>
+      
+      <!-- Top header bar in card -->
+      <path d="M 437 97 L 842 97" stroke="#161E30" stroke-width="1"/>
+      <circle cx="455" cy="81" r="4" fill="#00FF41"/>
+      <text x="467" y="85" font-family="JetBrains Mono, monospace" font-size="11" font-weight="600" fill="#94A3B8">ai-healthcare</text>
+      
+      <!-- Project Name with Blinking Terminal Cursor -->
+      <text x="455" y="127" font-family="JetBrains Mono, monospace" font-size="16" font-weight="800" fill="#F1F5F9">
+        Medify-PRO<tspan fill="#FF7700"> _<animate attributeName="opacity" values="1;0;1" dur="1.2s" begin="0.20s" repeatCount="indefinite"/></tspan>
+      </text>
+      
+      <!-- Description -->
+      <text x="455" y="151" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12" fill="#94A3B8">
+        Medify AI Smart Medication Adherence &amp;amp; Health Mo...
+      </text>
+      
+      <!-- Donut Chart -->
+      <circle cx="787" cy="143" r="26" fill="none" stroke="#222838" stroke-width="8"/><circle cx="787" cy="143" r="26" fill="none" stroke="#3178C6" stroke-width="8" stroke-dasharray="160.10 3.27" stroke-dashoffset="-0.00" transform="rotate(-90 787 143)"/><circle cx="787" cy="143" r="26" fill="none" stroke="#563D7C" stroke-width="8" stroke-dasharray="3.27 160.10" stroke-dashoffset="-160.10" transform="rotate(-90 787 143)"/><text x="787" y="147" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12" font-weight="800" fill="#FFFFFF">98%</text>
+      
+      <!-- Legend / Language breakdown -->
+      <circle cx="453" cy="209" r="3.5" fill="#3178C6"/><text x="460" y="212" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600" fill="#94A3B8">TypeScript 98%</text><circle cx="561" cy="209" r="3.5" fill="#563D7C"/><text x="568" y="212" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600" fill="#94A3B8">CSS 2%</text>
+    </g>
+    
+    <!-- Card: Restaurants-Project -->
+    <g>
+      <!-- Card background -->
+      <rect x="18" y="244" width="405" height="165" rx="12" fill="#0D111A" stroke="#1F283E" stroke-width="1.2"/>
+      
+      <!-- Top header bar in card -->
+      <path d="M 18 276 L 423 276" stroke="#161E30" stroke-width="1"/>
+      <circle cx="36" cy="260" r="4" fill="#FF7700"/>
+      <text x="48" y="264" font-family="JetBrains Mono, monospace" font-size="11" font-weight="600" fill="#94A3B8">vue3-pos-system</text>
+      
+      <!-- Project Name with Blinking Terminal Cursor -->
+      <text x="36" y="306" font-family="JetBrains Mono, monospace" font-size="16" font-weight="800" fill="#F1F5F9">
+        Restaurants-Project<tspan fill="#FF7700"> _<animate attributeName="opacity" values="1;0;1" dur="1.2s" begin="0.40s" repeatCount="indefinite"/></tspan>
+      </text>
+      
+      <!-- Description -->
+      <text x="36" y="330" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12" fill="#94A3B8">
+        Restaurant Management System with Retail POS &amp;amp; r...
+      </text>
+      
+      <!-- Donut Chart -->
+      <circle cx="368" cy="322" r="26" fill="none" stroke="#222838" stroke-width="8"/><circle cx="368" cy="322" r="26" fill="none" stroke="#42B883" stroke-width="8" stroke-dasharray="94.75 68.61" stroke-dashoffset="-0.00" transform="rotate(-90 368 322)"/><circle cx="368" cy="322" r="26" fill="none" stroke="#F7DF1E" stroke-width="8" stroke-dasharray="62.08 101.28" stroke-dashoffset="-94.75" transform="rotate(-90 368 322)"/><circle cx="368" cy="322" r="26" fill="none" stroke="#C6538C" stroke-width="8" stroke-dasharray="6.53 156.83" stroke-dashoffset="-156.83" transform="rotate(-90 368 322)"/><text x="368" y="326" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12" font-weight="800" fill="#FFFFFF">58%</text>
+      
+      <!-- Legend / Language breakdown -->
+      <circle cx="34" cy="388" r="3.5" fill="#42B883"/><text x="41" y="391" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600" fill="#94A3B8">Vue 58%</text><circle cx="93" cy="388" r="3.5" fill="#F7DF1E"/><text x="100" y="391" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600" fill="#94A3B8">JavaScript 38%</text><circle cx="201" cy="388" r="3.5" fill="#C6538C"/><text x="208" y="391" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600" fill="#94A3B8">SCSS 4%</text>
+    </g>
+    
+    <!-- Card: Medify-App- -->
+    <g>
+      <!-- Card background -->
+      <rect x="437" y="244" width="405" height="165" rx="12" fill="#0D111A" stroke="#1F283E" stroke-width="1.2"/>
+      
+      <!-- Top header bar in card -->
+      <path d="M 437 276 L 842 276" stroke="#161E30" stroke-width="1"/>
+      <circle cx="455" cy="260" r="4" fill="#22D3EE"/>
+      <text x="467" y="264" font-family="JetBrains Mono, monospace" font-size="11" font-weight="600" fill="#94A3B8">flutter-mobile</text>
+      
+      <!-- Project Name with Blinking Terminal Cursor -->
+      <text x="455" y="306" font-family="JetBrains Mono, monospace" font-size="16" font-weight="800" fill="#F1F5F9">
+        Medify-App-<tspan fill="#FF7700"> _<animate attributeName="opacity" values="1;0;1" dur="1.2s" begin="0.60s" repeatCount="indefinite"/></tspan>
+      </text>
+      
+      <!-- Description -->
+      <text x="455" y="330" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12" fill="#94A3B8">
+        Cross-platform mobile application for smart patient ...
+      </text>
+      
+      <!-- Donut Chart -->
+      <circle cx="787" cy="322" r="26" fill="none" stroke="#222838" stroke-width="8"/><circle cx="787" cy="322" r="26" fill="none" stroke="#00B4AB" stroke-width="8" stroke-dasharray="106.19 57.18" stroke-dashoffset="-0.00" transform="rotate(-90 787 322)"/><circle cx="787" cy="322" r="26" fill="none" stroke="#E34F26" stroke-width="8" stroke-dasharray="34.31 129.06" stroke-dashoffset="-106.19" transform="rotate(-90 787 322)"/><circle cx="787" cy="322" r="26" fill="none" stroke="#A97BFF" stroke-width="8" stroke-dasharray="22.87 140.49" stroke-dashoffset="-140.49" transform="rotate(-90 787 322)"/><text x="787" y="326" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12" font-weight="800" fill="#FFFFFF">65%</text>
+      
+      <!-- Legend / Language breakdown -->
+      <circle cx="453" cy="388" r="3.5" fill="#00B4AB"/><text x="460" y="391" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600" fill="#94A3B8">Dart 65%</text><circle cx="519" cy="388" r="3.5" fill="#E34F26"/><text x="526" y="391" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600" fill="#94A3B8">HTML 21%</text><circle cx="585" cy="388" r="3.5" fill="#A97BFF"/><text x="592" y="391" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600" fill="#94A3B8">Kotlin 14%</text>
+    </g>
+    
+
+  <!-- Footer Status -->
+  <g transform="translate(24, 416)">
+    <text x="0" y="0" font-family="JetBrains Mono, monospace" font-size="10" fill="#64748B">⚡ SAMS ALIF • SHOWCASE REPOSITORIES</text>
+    <text x="812" y="0" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="10" fill="#FF7700">ALL SYSTEMS ONLINE</text>
+  </g>
+</svg>

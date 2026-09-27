@@ -75,6 +75,17 @@
 
 ---
 
+## 💻 SHOWCASE PROJECTS
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/TheSamsAlif/My-Profile-Review-/main/projects.svg">
+    <img src="https://raw.githubusercontent.com/TheSamsAlif/My-Profile-Review-/main/projects.svg" width="100%" alt="Showcase Projects">
+  </picture>
+</div>
+
+---
+
 ## 🏆 ACHIEVEMENTS & TROPHIES
 
 <div align="center">
