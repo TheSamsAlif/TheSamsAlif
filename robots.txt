@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://the-sams-alif.vercel.app/sitemap.xml
