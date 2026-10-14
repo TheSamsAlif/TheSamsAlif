@@ -37,7 +37,7 @@
 ## 🛡️ DEVELOPER OPERATION STATUS
 
 <div align="center">
-  <img src="https://komarev.com/ghpvc/?username=TheSamsAlif&label=Profile+Views&color=FF6B00&labelColor=0A101F&style=for-the-badge" alt="Profile Views" />
+  <img src="https://hits.sh/github.com/TheSamsAlif.svg?style=for-the-badge&label=Profile+Views&color=ff6b00&labelColor=0a101f" alt="Profile Views" />
   <img src="https://img.shields.io/github/followers/TheSamsAlif?label=GitHub+Followers&style=for-the-badge&color=FF7700&labelColor=0A101F" alt="GitHub Followers" />
   <img src="https://img.shields.io/github/stars/TheSamsAlif?label=Repository+Stars&style=for-the-badge&color=FF3B30&labelColor=0A101F" alt="Repository Stars" />
 </div>
